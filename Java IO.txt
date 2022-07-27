@@ -1,0 +1,86 @@
+Java I/O --> used to process the input and produce the output.
+We can perform file handling in Java by Java I/O API.
+
+-------------------------------------------
+S-P->Read data from source=Input Stream
+P-D->Write data to destination=Output Stream
+____________________________________________
+Stream
+------
+A stream is a sequence of data. In Java, a stream is composed of bytes.
+In Java, 3 streams are created for us automatically. All these streams are attached with the console.
+
+1) System.out: standard output stream
+
+2) System.in:  standard input stream
+
+3) System.err: standard error stream
+
+____________________________________________
+Types of Stream
+----------------
+1)byte Stream->
+Byte stream is used to read and write a single byte (8 bits) of data.
+All byte stream classes are derived from base abstract classes called InputStream and OutputStream.
+
+	1)Java InputStream Class->
+The InputStream class of the java.io package is an abstract superclass that represents an input stream of bytes.
+
+	*Subclasses of InputStream
+	-----------------------------
+	1)FileInputStream->Used to read data from file. 
+Syntax:FileInputStream input=new FileInputStream();  
+	2)ByteArrayInputStream->Used to read an array from input data.
+Syntax:ByteArrayInputStream input=new ByteArrayInputStream();
+	3)ObjectInputStream->Used to read objects that were previously written by ObjectOutputStream.
+Syntax:ObjectInputStream input=new ObjectInputStream();
+
+
+
+	2)Java OutputStream Class
+The OutputStream class of the java.io package is an abstract superclass that represents an output stream of bytes.
+
+	*Subclasses of OutputStream
+	--------------------------------
+	1)FileOutputStream->Used to write data to file.
+Syntax:FileOutputStream output = new FileOutputStream();
+	2)ByteArrayOutputStream->Used to write an array of output data.
+Syntax:ByteArrayOutputStream out = new ByteArrayOutputStream();
+	3)ObjectOutputStream->Used to write objects that can be read by ObjectInputStream.
+Syntax:ObjectOutputStream out=new ObjectOutputStream();
+
+
+===============================================================
+2)character Stream
+Character stream is used to read and write a single character of data.
+All the character stream classes are derived from base abstract classes Reader and Writer.
+
+	1)Java Reader Class
+The Reader class of the java.io package is an abstract superclass that represents a stream of characters.
+	
+	*Subclasses of Reader
+	---------------------------
+	1)BufferedReader->Used with other readers to read data (in characters) more efficiently.
+Syntax:BufferedReader buffer = new BufferedReader();
+	2)InputStreamReader->Used to convert data in bytes into data in characters.
+Syntax:InputStreamReader input = new InputStreamReader();
+	3)FileReader->Used to read data (in characters) from files.
+Syntax:FileReader input = new FileReader();
+	4)StringReader->Used to read data (in characters) from strings.
+Syntax:StringReader input = new StringReader(String data);
+
+
+
+	2)Java Writer Class
+The Writer class of the java.io package is an abstract superclass that represents a stream of characters.
+
+	Subclasses of Writer
+	----------------------------
+	1)BufferedWriter->Used with other writers to write data (in characters) more efficiently.
+Syntax:BufferedWriter buffer = new BufferedWriter(file);
+	2)OutputStreamWriter->Used to convert data in character form into data in bytes form.
+Syntax:OutputStreamWriter output = new OutputStreamWriter();	
+	3)FileWriter->Used to write data (in characters) to files.
+Syntax:FileWriter output = new FileWriter();
+	4)StringWriter->used to write data (in characters) to the string buffer.
+Syntax:StringWriter output = new StringWriter();
